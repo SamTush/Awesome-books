@@ -38,8 +38,6 @@
 
 > # Awesome Books
 
- <img src="image.png" alt="logo" width="auto" />
-
 **[Portfolio setup and mobile first]** 
 
 ## 🛠 Built With <a name="built-with">html, scss, bootstrap, javascript</a>
