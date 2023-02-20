@@ -1,0 +1,2 @@
+# Awesome-books
+In this project, I will build a basic website that allows users to add/remove books from a list. I will achieve this by using JavaScript objects and arrays. I will also need to dynamically modify the DOM and add basic events.
