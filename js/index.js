@@ -18,9 +18,14 @@ function createBook(book) {
 
   const deleteButtonEl = document.createElement('button');
   deleteButtonEl.classList.add('remove-book');
+  deleteButtonEl.classList.add('btn');
+  deleteButtonEl.classList.add('btn-outline-dark');
   deleteButtonEl.textContent = 'Remove';
   deleteButtonEl.setAttribute('data-book-id', book.id);
   bookEl.appendChild(deleteButtonEl);
+
+  const hr = document.createElement('hr');
+  bookEl.appendChild(hr);
 
   booksSection.appendChild(bookEl);
 }
