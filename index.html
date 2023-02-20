@@ -8,42 +8,36 @@
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
-    <h1>Awesome books</h1>
+    <header>
+        <h1>Awesome books</h1>
+    </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col col-12 add-remove-book">
-                <div class="row">
-                    <div class="col col-12">
-                        <p>Lorem ipsum</p>
-                        <p>Testeroo Testyy</p>
-                        <button id="remove" class="btn btn-outline-dark">Remove</button>
-                        <hr>
-                    </div>
-                    <div class="col col-12">
-                        <p>Second book</p>
-                        <p>Testeroo Testyy</p>
-                        <button id="remove" class="btn btn-outline-dark">Remove</button>
-                        <hr>
-                    </div>
-                    <div class="col col-12 addItem">
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-12 add-remove-book">
+                    <div class="row">
+                        <div class="col col-12">
+                            <ul class="books">
 
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col col-12">
-                <form action="submit" id="form">
-                    <div class="mb-4">
-                        <input id="title" type="text" name="title" class="form-control" placeholder="Title">
-                    </div>
-                    <div class="mb-4">
-                        <input id="author" type="text" name="author" class="form-control" placeholder="Author">
-                    </div>
-                    <button id="add" class="btn btn-outline-dark">Add</button>
-                </form>
+                <div class="col col-12">
+                    <form action="" id="book-form">
+                        <div class="mb-4">
+                            <input id="title" type="text" name="title" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="mb-4">
+                            <input id="author" type="text" name="author" class="form-control" placeholder="Author">
+                        </div>
+                        <button type="submit" id="add" class="btn btn-outline-dark">Add</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
 </body>
