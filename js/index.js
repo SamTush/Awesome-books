@@ -53,3 +53,21 @@ function removeBook(bookId) {
   bookEl.remove();
 }
 
+document.querySelector('#book-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  const title = titleInput.value;
+  const author = authorInput.value;
+  if (title !== '' && author !== '') {
+    addBook(title, author);
+    titleInput.value = '';
+    authorInput.value = '';
+    titleInput.focus();
+  }
+});
+
+booksSection.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-book')) {
+    const bookId = event.target.getAttribute('data-book-id');
+    removeBook(bookId);
+  }
+});
