@@ -1,0 +1,25 @@
+$primary: #012622;
+$primary-variant: #003b36;
+$secondary: #e98a15;
+$tertiary: #fdfffc;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 434px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
