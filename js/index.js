@@ -21,7 +21,7 @@ class Book {
     const deleteButtonEl = document.createElement('button');
     deleteButtonEl.classList.add('remove-book');
     deleteButtonEl.classList.add('btn');
-    deleteButtonEl.classList.add('btn-outline-dark');
+    deleteButtonEl.classList.add('btn-outline-light');
     deleteButtonEl.textContent = 'Remove';
     deleteButtonEl.setAttribute('data-book-id', this.id);
     bookEl.appendChild(deleteButtonEl);
