@@ -24,7 +24,7 @@ body {
   }
 
   button {
-    outline-color: #fdfffc;
+    outline-color: $tertiary;
   }
 }
 
@@ -74,12 +74,24 @@ header {
 }
 
 section {
+  .display-off {
+    display: none !important;
+  }
+
+  .display-on {
+    display: block !important;
+  }
+
   .list-book {
     display: none;
   }
 
   .add-book {
     height: 55vh;
+  }
+
+  .contact-book {
+    display: none;
   }
 }
 

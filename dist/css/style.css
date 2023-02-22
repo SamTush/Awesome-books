@@ -54,11 +54,20 @@ header .date-time .time {
   justify-content: end;
 }
 
+section .display-off {
+  display: none !important;
+}
+section .display-on {
+  display: block !important;
+}
 section .list-book {
   display: none;
 }
 section .add-book {
   height: 55vh;
+}
+section .contact-book {
+  display: none;
 }
 
 footer {

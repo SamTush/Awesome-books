@@ -122,12 +122,39 @@ const contactBook = document.querySelector('.contact-book');
 
 
 listBookClick.addEventListener('click', (e) => {
-  listBook.classList.remove('list-book');
+  e.preventDefault();
+  listBook.classList.add('display-on');
   listBook.classList.add('active');
-  addBookfun.style.display += 'none !important';
+  addBookfun.classList.add('display-off');
+  contactBook.classList.add('display-off');
   if (contactBookClick.classList.contains('active') || addBookFunClick.classList.contains('active')) {
     contactBookClick.classList.remove('active');
     addBookFunClick.classList.remove('active');
   }
+});
 
+addBookFunClick.addEventListener('click', (e) => {
+  e.preventDefault();
+  addBookfun.classList.remove('display-off');
+  addBookfun.classList.add('active');
+  listBook.classList.remove('display-on');
+  contactBook.classList.remove('display-on');
+  if(contactBook.classList.contains('active') || listBookClick.classList.contains('active')){
+    contactBookClick.classList.remove('active');
+    listBookClick.classList.remove('active');
+  }
+});
+
+contactBookClick.addEventListener('click', (e) => {
+  e.preventDefault();
+  contactBook.classList.add('display-on');
+  contactBook.classList.add('active');
+  listBook.classList.remove('display-on');
+  listBook.classList.add('display-off');
+  addBookfun.classList.remove('display-on');
+  addBookfun.classList.add('display-off');
+  if(addBookfun.classList.contains('active') || listBookClick.classList.contains('active')){
+    contactBookClick.classList.remove('active');
+    addBookFunClick.classList.remove('active');
+  }
 });
