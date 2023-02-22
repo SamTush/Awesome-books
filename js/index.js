@@ -80,13 +80,14 @@ const dateTime = document.createElement('div');
 const dateTimeDiv = document.querySelector('.date-time-div');
 
 function dateTimefun() {
-  const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const weekday = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   let date = new Date();
   let hrs = date.getHours();
   let min = date.getMinutes();
   let sec = date.getSeconds();
   let realDate = date.getDate();
-  let month = date.getDay();
+  let month = months[date.getMonth()];
   let year = date.getFullYear();
   let week = weekday[date.getDay()];
 
@@ -96,10 +97,6 @@ function dateTimefun() {
 
   if (sec < 10) {
     sec = '0' + sec;
-  }
-
-  if (month < 10) {
-    month = '0' + month;
   }
 
   document.querySelector('.hours').innerHTML = hrs;
