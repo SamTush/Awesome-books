@@ -59,6 +59,17 @@ header {
     background-color: $secondary;
     border-color: $secondary;
   }
+
+  .date-time {
+    padding: 18px 54px;
+
+    div a {
+      color: #fdfffc;
+      text-decoration: none;
+      display: flex;
+      justify-content: end;
+    }
+  }
 }
 
 section {

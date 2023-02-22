@@ -75,3 +75,12 @@ booksSection.addEventListener('click', (event) => {
     Book.removeBook(bookId);
   }
 });
+
+let date = new Date();
+
+const dateTime = document.createElement('div');
+const dateTimeDiv = document.querySelector('.date-time-div');
+dateTime.innerHTML = `
+  <a href="">${date}</a>
+`;
+dateTimeDiv.appendChild(dateTime);
