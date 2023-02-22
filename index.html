@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg mt-3 ms-3 me-3 fixed-top">
             <div class="container-fluid ps-sm-5 pe-sm-5">
               <a class="navbar-brand text-light" href="#">
                 <h1>AwesomeBooks</h1>
@@ -21,15 +21,15 @@
                 </svg>
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav active-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">List</a>
+                    <a class="nav-link list-book-click" aria-current="page" href="#">List</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Add new</a>
+                    <a class="nav-link active add-book-click" href="#">Add new</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link contact-book-click" href="#">Contact</a>
                   </li>
                   <li class="nav-item dropdown">
                     <ul class="dropdown-menu">
@@ -43,61 +43,72 @@
             </div>
           </nav>
           <div class="date-time container-fluid">
-            <div class="col col-12 date-time-div d-flex justify-content-end">
-                <span class="weekDay"></span>
-                <span>&nbsp;</span>
-                <span class="date"></span>
-                <span>&nbsp;</span>
-                <span class="day"></span>
-                <span>&nbsp;</span>
-                <span class="year"></span>
-                <span>&emsp;</span>
-                <span class="hours"></span>
-                <span>:</span>
-                <span class="minutes"></span>
-                <span>:</span>
-                <span class="seconds"></span>
+            <div class="row  d-flex justify-content-end">
+                <div class="col col-lg-3 col-md-3 col-3 date-time-div d-flex justify-content-end">
+                    <span class="weekDay"></span>
+                    <span>&nbsp;</span>
+                    <span class="date"></span>
+                    <span>&nbsp;</span>
+                    <span class="day"></span>
+                    <span>&nbsp;</span>
+                    <span class="year"></span>
+                </div>
+                <div class="col col-md-2 col-lg-2 col-12 time">
+                    <span class="hours"></span>
+                    <span>:</span>
+                    <span class="minutes"></span>
+                    <span>:</span>
+                    <span class="seconds"></span>
+                </div>
             </div>
           </div>
     </header>
 
-    <section class="container-fluid">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col col-12">
-                    <ul class="books">
-                    
-                    </ul>
+    <section>
+        <div class="container-fluid list-book">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-12">
+                        <ul class="books">
+                        
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="container-fluid">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col col-12 new-book">
-                    <form id="book-form">
-                        <input class="form-control mt-4 mb-4" type="text" id="title" placeholder="Title">
-                        <input class="form-control mb-4" type="text" id="author" placeholder="Author">
-                        <button class="btn btn-outline-light" type="submit">Add Book</button>
-                      </form>
+    
+        <div class="container-fluid add-book">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-12 new-book">
+                        <form id="book-form">
+                            <input class="form-control mt-4 mb-4" type="text" id="title" placeholder="Title">
+                            <input class="form-control mb-4" type="text" id="author" placeholder="Author">
+                            <button class="btn btn-outline-light" type="submit">Add Book</button>
+                          </form>
+                    </div>
                 </div>
             </div>
+        </div>
+    
+        <div class="container-fliud contact-book">
+    
         </div>
     </section>
 
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col col-3">
-                    <h6>AwesomeBooks</h6>
-                </div>
-                <div class="col col-9 d-flex justify-content-end">
-                    <a>2023 © AwesomeBooks. Some Rights Reserved.</a>
+        <nav class="fixed-bottom mb-3 ms-3 me-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-3">
+                        <h6>AwesomeBooks</h6>
+                    </div>
+                    <div class="col col-9 d-flex justify-content-end">
+                        <a>2023 © AwesomeBooks. Some Rights Reserved.</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
     </footer>
 
     <script src="https://kit.fontawesome.com/2a42914cf9.js" crossorigin="anonymous"></script>

@@ -45,17 +45,20 @@ header .button {
   border-color: #e98a15;
 }
 header .date-time {
-  padding: 18px 54px;
+  margin-top: 65px;
+  padding: 28px 14px;
+  color: #007b71;
 }
-header .date-time div a {
-  color: #fdfffc;
-  text-decoration: none;
+header .date-time .time {
   display: flex;
   justify-content: end;
 }
 
-section .new-book {
-  height: 73vh;
+section .list-book {
+  display: none;
+}
+section .add-book {
+  height: 55vh;
 }
 
 footer {
@@ -78,5 +81,9 @@ footer div a {
   body {
     width: 100%;
     background-color: #012622;
+  }
+  header .date-time .time {
+    display: flex;
+    justify-content: start;
   }
 }/*# sourceMappingURL=style.css.map */

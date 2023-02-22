@@ -112,7 +112,22 @@ function dateTimefun() {
 }
 
 setInterval(dateTimefun, 10);
-// dateTime.innerHTML = `
-//   <a href="">${dateTime}</a>
-// `;
-// dateTimeDiv.appendChild(dateTime);
+
+const listBookClick = document.querySelector('.list-book-click');
+const listBook = document.querySelector('.list-book');
+const addBookFunClick = document.querySelector('.add-book-click');
+const addBookfun = document.querySelector('.add-book');
+const contactBookClick = document.querySelector('.contact-book-click');
+const contactBook = document.querySelector('.contact-book');
+
+
+listBookClick.addEventListener('click', (e) => {
+  listBook.classList.remove('list-book');
+  listBook.classList.add('active');
+  addBookfun.style.display += 'none !important';
+  if (contactBookClick.classList.contains('active') || addBookFunClick.classList.contains('active')) {
+    contactBookClick.classList.remove('active');
+    addBookFunClick.classList.remove('active');
+  }
+
+});

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,700;1,800&display=swap');
 $primary: #012622;
 $primary-variant: #003b36;
+$primary-light: #007b71;
 $secondary: #e98a15;
 $tertiary: #fdfffc;
 
@@ -61,11 +62,11 @@ header {
   }
 
   .date-time {
-    padding: 18px 54px;
+    margin-top: 65px;
+    padding: 28px 14px;
+    color: $primary-light;
 
-    div a {
-      color: #fdfffc;
-      text-decoration: none;
+    .time {
       display: flex;
       justify-content: end;
     }
@@ -73,8 +74,12 @@ header {
 }
 
 section {
-  .new-book {
-    height: 73vh;
+  .list-book {
+    display: none;
+  }
+
+  .add-book {
+    height: 55vh;
   }
 }
 
@@ -101,5 +106,14 @@ footer {
   body {
     width: 100%;
     background-color: $primary;
+  }
+
+  header {
+    .date-time {
+      .time {
+        display: flex;
+        justify-content: start;
+      }
+    } 
   }
 }
