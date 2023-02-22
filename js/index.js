@@ -76,11 +76,43 @@ booksSection.addEventListener('click', (event) => {
   }
 });
 
-let date = new Date();
-
 const dateTime = document.createElement('div');
 const dateTimeDiv = document.querySelector('.date-time-div');
-dateTime.innerHTML = `
-  <a href="">${date}</a>
-`;
-dateTimeDiv.appendChild(dateTime);
+
+function dateTimefun() {
+  const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  let date = new Date();
+  let hrs = date.getHours();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  let realDate = date.getDate();
+  let month = date.getDay();
+  let year = date.getFullYear();
+  let week = weekday[date.getDay()];
+
+  if (min < 10) {
+    min = '0' + min;
+  }
+
+  if (sec < 10) {
+    sec = '0' + sec;
+  }
+
+  if (month < 10) {
+    month = '0' + month;
+  }
+
+  document.querySelector('.hours').innerHTML = hrs;
+  document.querySelector('.minutes').innerHTML = min;
+  document.querySelector('.seconds').innerHTML = sec;
+  document.querySelector('.weekDay').innerHTML = week;
+  document.querySelector('.date').innerHTML = realDate;
+  document.querySelector('.day').innerHTML = month;
+  document.querySelector('.year').innerHTML = year;
+}
+
+setInterval(dateTimefun, 10);
+// dateTime.innerHTML = `
+//   <a href="">${dateTime}</a>
+// `;
+// dateTimeDiv.appendChild(dateTime);
