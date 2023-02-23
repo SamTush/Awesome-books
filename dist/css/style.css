@@ -74,6 +74,9 @@ section .add-book {
 section .contact-book {
   display: none;
 }
+section .span {
+  color: #e98a15;
+}
 
 footer {
   padding: 18px 8px;
@@ -95,5 +98,22 @@ footer div h6 {
   header .date-time .time {
     display: flex;
     justify-content: start;
+  }
+  section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .add-book {
+    height: 55vh;
+    width: 700px;
+  }
+  section .add-book #book-form input {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .add-book #book-form button {
+    display: flex;
+    margin-left: auto;
   }
 }/*# sourceMappingURL=style.css.map */

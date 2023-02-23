@@ -13,24 +13,36 @@ class Book {
     const bookEl = document.createElement('li');
     bookEl.setAttribute('id', this.id);
 
+    const divEl = document.createElement('div');
+    divEl.classList.add('d-flex', 'justify-content-between');
+
+    const divInner = document.createElement('div');
+    divInner.classList.add('d-flex');
+
     const titleEl = document.createElement('p');
     titleEl.textContent = this.title;
-    bookEl.appendChild(titleEl);
+    divInner.appendChild(titleEl);
+
+    const spaceEl = document.createElement('p');
+    spaceEl.classList.add('span');
+    spaceEl.innerHTML = '&nbsp;by&nbsp;';
+    divInner.appendChild(spaceEl);
 
     const authorEl = document.createElement('p');
     authorEl.textContent = this.author;
-    bookEl.appendChild(authorEl);
+    divInner.appendChild(authorEl);
+
+    divEl.appendChild(divInner);
 
     const deleteButtonEl = document.createElement('button');
-    deleteButtonEl.classList.add('remove-book');
-    deleteButtonEl.classList.add('btn');
-    deleteButtonEl.classList.add('btn-outline-light');
+    deleteButtonEl.classList.add('remove-book', 'btn', 'btn-outline-light');
     deleteButtonEl.textContent = 'Remove';
     deleteButtonEl.setAttribute('data-book-id', this.id);
-    bookEl.appendChild(deleteButtonEl);
+    divEl.appendChild(deleteButtonEl);
 
-    const hr = document.createElement('hr');
-    bookEl.appendChild(hr);
+    bookEl.appendChild(divEl);
+    const hrline = document.createElement('hr');
+    bookEl.appendChild(hrline);
 
     booksSection.appendChild(bookEl);
   }

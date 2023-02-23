@@ -97,6 +97,10 @@ section {
   .contact-book {
     display: none;
   }
+
+  .span {
+    color: $secondary;
+  }
 }
 
 footer {
@@ -124,6 +128,29 @@ footer {
       .time {
         display: flex;
         justify-content: start;
+      }
+    }
+  }
+
+  section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .add-book {
+      height: 55vh;
+      width: 700px;
+
+      #book-form {
+        input {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        button {
+          display: flex;
+          margin-left: auto;
+        }
       }
     }
   }
