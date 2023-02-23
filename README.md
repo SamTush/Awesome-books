@@ -16,7 +16,6 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [🚀 Loom Video](#loom-video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -37,6 +36,9 @@
 # 📖 [Awesome Books] <a name="about-project"></a>
 
 > # Awesome Books
+
+  <img src="mobile.png" alt="logo" width="300"  height="auto" />
+  <img src="desktop.png" alt="logo" width="600"  height="auto" />
 
 **[Portfolio setup and mobile first]** 
 
@@ -126,6 +128,12 @@ You can deploy this project using: github
 - GitHub: [@githubhandle](https://github.com/SamTush)
 - Twitter: [@twitterhandle](https://twitter.com/samo44o)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/samson-tush-4a7386216/)
+
+👤 **Abdul Ali Noori**
+
+- GitHub: [@ab-noori](https://github.com/ab-noori)
+- Twitter: [@AbdulAliNoori4](https://twitter.com/AbdulAliNoori4)
+- LinkedIn: [abdul-ali-noori](https://www.linkedin.com/in/abdul-ali-noori-384b85195/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
