@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,700;1,800&display=swap');
 $primary: #012622;
 $primary-variant: #003b36;
+$primary-light: #007b71;
 $secondary: #e98a15;
 $tertiary: #fdfffc;
 
@@ -10,16 +12,146 @@ $tertiary: #fdfffc;
 }
 
 body {
-  width: 434px;
+  width: 390px;
+  background-color: $primary;
+  color: $tertiary;
+  font-family: 'Shantell Sans', cursive;
+  height: 100vh;
 
   ul {
     list-style: none;
     padding: 0;
+  }
+
+  button {
+    outline-color: $tertiary;
+  }
+}
+
+footer div a {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
+header {
+  padding: 18px 8px;
+
+  nav {
+    background-color: $primary-variant;
+    border-radius: 8px;
+
+    .collapse {
+      ul a {
+        color: $tertiary;
+      }
+
+      ul a:hover {
+        color: $secondary;
+      }
+
+      .active {
+        color: $secondary !important;
+      }
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    color: $secondary;
+  }
+
+  .button {
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+
+  .date-time {
+    margin-top: 65px;
+    padding: 28px 14px;
+    color: $primary-light;
+
+    .time {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
+
+section {
+  .display-off {
+    display: none !important;
+  }
+
+  .display-on {
+    display: block !important;
+  }
+
+  .list-book {
+    display: none;
+  }
+
+  .add-book {
+    height: 55vh;
+  }
+
+  .contact-book {
+    display: none;
+  }
+
+  .span {
+    color: $secondary;
+  }
+}
+
+footer {
+  padding: 18px 8px;
+
+  div {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: $primary-variant;
+
+    h6 {
+      color: $secondary;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   body {
     width: 100%;
+    background-color: $primary;
+  }
+
+  header {
+    .date-time {
+      .time {
+        display: flex;
+        justify-content: start;
+      }
+    }
+  }
+
+  section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .add-book {
+      height: 55vh;
+      width: 700px;
+
+      #book-form {
+        input {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        button {
+          display: flex;
+          margin-left: auto;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,700;1,800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 390px;
+  background-color: #012622;
+  color: #fdfffc;
+  font-family: "Shantell Sans", cursive;
+  height: 100vh;
+}
+body ul {
+  list-style: none;
+  padding: 0;
+}
+body button {
+  outline-color: #fdfffc;
+}
+
+footer div a {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
+header {
+  padding: 18px 8px;
+}
+header nav {
+  background-color: #003b36;
+  border-radius: 8px;
+}
+header nav .collapse ul a {
+  color: #fdfffc;
+}
+header nav .collapse ul a:hover {
+  color: #e98a15;
+}
+header nav .collapse .active {
+  color: #e98a15 !important;
+}
+header h1 {
+  font-weight: 700;
+  color: #e98a15;
+}
+header .button {
+  background-color: #e98a15;
+  border-color: #e98a15;
+}
+header .date-time {
+  margin-top: 65px;
+  padding: 28px 14px;
+  color: #007b71;
+}
+header .date-time .time {
+  display: flex;
+  justify-content: end;
+}
+
+section .display-off {
+  display: none !important;
+}
+section .display-on {
+  display: block !important;
+}
+section .list-book {
+  display: none;
+}
+section .add-book {
+  height: 55vh;
+}
+section .contact-book {
+  display: none;
+}
+section .span {
+  color: #e98a15;
+}
+
+footer {
+  padding: 18px 8px;
+}
+footer div {
+  padding: 12px 18px;
+  border-radius: 8px;
+  background-color: #003b36;
+}
+footer div h6 {
+  color: #e98a15;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+    background-color: #012622;
+  }
+  header .date-time .time {
+    display: flex;
+    justify-content: start;
+  }
+  section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .add-book {
+    height: 55vh;
+    width: 700px;
+  }
+  section .add-book #book-form input {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .add-book #book-form button {
+    display: flex;
+    margin-left: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
