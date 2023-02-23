@@ -38,7 +38,7 @@
 > # Awesome Books
 
   <img src="mobile.png" alt="logo" width="300"  height="auto" />
-  <img src="desktop.png" alt="logo" width="600"  height="auto" />
+  <img src="desktop.png" alt="logo" width="auto"  height="auto" />
 
 **[Portfolio setup and mobile first]** 
 
