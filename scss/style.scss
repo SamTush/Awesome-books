@@ -28,6 +28,11 @@ body {
   }
 }
 
+footer div a {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
 header {
   padding: 18px 8px;
 
@@ -36,7 +41,6 @@ header {
     border-radius: 8px;
 
     .collapse {
-      
       ul a {
         color: $tertiary;
       }
@@ -106,11 +110,6 @@ footer {
     h6 {
       color: $secondary;
     }
-
-    a {
-      font-weight: 300;
-      font-size: 0.7em;
-    }
   }
 }
 
@@ -126,6 +125,6 @@ footer {
         display: flex;
         justify-content: start;
       }
-    } 
+    }
   }
 }

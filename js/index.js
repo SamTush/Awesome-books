@@ -1,3 +1,6 @@
+let books = JSON.parse(localStorage.getItem('books')) || [];
+const booksSection = document.querySelector('.books');
+
 class Book {
   constructor(id, title, author, isComplete = false) {
     this.id = id;
@@ -47,11 +50,8 @@ class Book {
   }
 }
 
-const booksSection = document.querySelector('.books');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
-
-let books = JSON.parse(localStorage.getItem('books')) || [];
 
 if (localStorage.getItem('books')) {
   books.forEach((book) => new Book(book.id, book.title, book.author, book.isComplete).createEl());
@@ -76,27 +76,24 @@ booksSection.addEventListener('click', (event) => {
   }
 });
 
-const dateTime = document.createElement('div');
-const dateTimeDiv = document.querySelector('.date-time-div');
-
 function dateTimefun() {
-  const weekday = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  let date = new Date();
-  let hrs = date.getHours();
+  const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const date = new Date();
+  const hrs = date.getHours();
   let min = date.getMinutes();
   let sec = date.getSeconds();
-  let realDate = date.getDate();
-  let month = months[date.getMonth()];
-  let year = date.getFullYear();
-  let week = weekday[date.getDay()];
+  const realDate = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  const week = weekday[date.getDay()];
 
   if (min < 10) {
-    min = '0' + min;
+    min = `0${min}`;
   }
 
   if (sec < 10) {
-    sec = '0' + sec;
+    sec = `0${sec}`;
   }
 
   document.querySelector('.hours').innerHTML = hrs;
@@ -117,13 +114,12 @@ const addBookfun = document.querySelector('.add-book');
 const contactBookClick = document.querySelector('.contact-book-click');
 const contactBook = document.querySelector('.contact-book');
 
-
 listBookClick.addEventListener('click', (e) => {
   e.preventDefault();
   listBook.classList.add('display-on');
   listBook.classList.add('active');
   addBookfun.classList.add('display-off');
-  contactBook.classList.add('display-off');
+  contactBook.classList.remove('display-on');
   if (contactBookClick.classList.contains('active') || addBookFunClick.classList.contains('active')) {
     contactBookClick.classList.remove('active');
     addBookFunClick.classList.remove('active');
@@ -136,7 +132,7 @@ addBookFunClick.addEventListener('click', (e) => {
   addBookfun.classList.add('active');
   listBook.classList.remove('display-on');
   contactBook.classList.remove('display-on');
-  if(contactBook.classList.contains('active') || listBookClick.classList.contains('active')){
+  if (contactBook.classList.contains('active') || listBookClick.classList.contains('active')) {
     contactBookClick.classList.remove('active');
     listBookClick.classList.remove('active');
   }
@@ -150,7 +146,7 @@ contactBookClick.addEventListener('click', (e) => {
   listBook.classList.add('display-off');
   addBookfun.classList.remove('display-on');
   addBookfun.classList.add('display-off');
-  if(addBookfun.classList.contains('active') || listBookClick.classList.contains('active')){
+  if (addBookfun.classList.contains('active') || listBookClick.classList.contains('active')) {
     contactBookClick.classList.remove('active');
     addBookFunClick.classList.remove('active');
   }
