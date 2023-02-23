@@ -76,11 +76,82 @@ booksSection.addEventListener('click', (event) => {
   }
 });
 
-let date = new Date();
-
 const dateTime = document.createElement('div');
 const dateTimeDiv = document.querySelector('.date-time-div');
-dateTime.innerHTML = `
-  <a href="">${date}</a>
-`;
-dateTimeDiv.appendChild(dateTime);
+
+function dateTimefun() {
+  const weekday = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  let date = new Date();
+  let hrs = date.getHours();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  let realDate = date.getDate();
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let week = weekday[date.getDay()];
+
+  if (min < 10) {
+    min = '0' + min;
+  }
+
+  if (sec < 10) {
+    sec = '0' + sec;
+  }
+
+  document.querySelector('.hours').innerHTML = hrs;
+  document.querySelector('.minutes').innerHTML = min;
+  document.querySelector('.seconds').innerHTML = sec;
+  document.querySelector('.weekDay').innerHTML = week;
+  document.querySelector('.date').innerHTML = realDate;
+  document.querySelector('.day').innerHTML = month;
+  document.querySelector('.year').innerHTML = year;
+}
+
+setInterval(dateTimefun, 10);
+
+const listBookClick = document.querySelector('.list-book-click');
+const listBook = document.querySelector('.list-book');
+const addBookFunClick = document.querySelector('.add-book-click');
+const addBookfun = document.querySelector('.add-book');
+const contactBookClick = document.querySelector('.contact-book-click');
+const contactBook = document.querySelector('.contact-book');
+
+
+listBookClick.addEventListener('click', (e) => {
+  e.preventDefault();
+  listBook.classList.add('display-on');
+  listBook.classList.add('active');
+  addBookfun.classList.add('display-off');
+  contactBook.classList.add('display-off');
+  if (contactBookClick.classList.contains('active') || addBookFunClick.classList.contains('active')) {
+    contactBookClick.classList.remove('active');
+    addBookFunClick.classList.remove('active');
+  }
+});
+
+addBookFunClick.addEventListener('click', (e) => {
+  e.preventDefault();
+  addBookfun.classList.remove('display-off');
+  addBookfun.classList.add('active');
+  listBook.classList.remove('display-on');
+  contactBook.classList.remove('display-on');
+  if(contactBook.classList.contains('active') || listBookClick.classList.contains('active')){
+    contactBookClick.classList.remove('active');
+    listBookClick.classList.remove('active');
+  }
+});
+
+contactBookClick.addEventListener('click', (e) => {
+  e.preventDefault();
+  contactBook.classList.add('display-on');
+  contactBook.classList.add('active');
+  listBook.classList.remove('display-on');
+  listBook.classList.add('display-off');
+  addBookfun.classList.remove('display-on');
+  addBookfun.classList.add('display-off');
+  if(addBookfun.classList.contains('active') || listBookClick.classList.contains('active')){
+    contactBookClick.classList.remove('active');
+    addBookFunClick.classList.remove('active');
+  }
+});
