@@ -40,7 +40,7 @@
   <img src="mobile.png" alt="logo" width="300"  height="auto" />
   <img src="desktop.png" alt="logo" width="auto"  height="auto" />
 
-**[Portfolio setup and mobile first]** 
+**[AwesomeBooks]** 
 
 ## 🛠 Built With <a name="built-with">html, scss, bootstrap, javascript</a>
 
@@ -53,7 +53,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Nav bar]**
-- **[About me section]**
+- **[Addbook section]**
+- **[list section]**
+- **[contact section]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
